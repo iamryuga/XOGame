@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/WinnerTV"
+        android:textStyle="bold"
+
+        android:textColor="@color/black"
+        />
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/WinnerTV"
+        android:layout_marginTop="70dp"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/player"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/red"
+            android:layout_toLeftOf="@id/player"
+            android:layout_below="@id/WinnerTV"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingStart="10dp"
+
+            android:text="Turn"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/PlayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play_again"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:onClick="play_again"
+        />
+
+    <ImageView
+        android:id="@+id/board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/board" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/white">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <ImageView
+                android:id="@+id/r1c1"
+                android:layout_width="4dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:alpha="0"
+                android:onClick="pressed"
+                android:tag="0" />
+
+            <ImageView
+                android:id="@+id/r1c2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:alpha="0"
+                android:onClick="pressed"
+                android:tag="1" />
+
+            <ImageView
+                android:id="@+id/r1c3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:alpha="0"
+                android:onClick="pressed"
+                android:tag="2" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <ImageView
+                android:id="@+id/r2c1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:alpha="0"
+                android:onClick="pressed"
+                android:tag="3" />
+
+            <ImageView
+                android:id="@+id/r2c2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:alpha="0"
+                android:onClick="pressed"
+                android:tag="4" />
+
+            <ImageView
+                android:id="@+id/r2c3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:alpha="0"
+                android:onClick="pressed"
+                android:tag="5" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <ImageView
+                android:id="@+id/r3c1"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:onClick="pressed"
+                android:alpha="0"
+                android:tag="6" />
+
+            <ImageView
+                android:id="@+id/r3c2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:alpha="0"
+                android:onClick="pressed"
+                android:tag="7" />
+
+            <ImageView
+                android:id="@+id/r3c3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:alpha="0"
+                android:onClick="pressed"
+                android:tag="8" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
